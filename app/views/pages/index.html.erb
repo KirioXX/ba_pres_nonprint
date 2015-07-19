@@ -1,0 +1,9 @@
+<% @pages.each do |page| %>
+    <section class="cd-section">
+      <div>
+        <div class="content">
+          <%= render :partial => 'pages/page', :object => page %>
+        </div>
+      </div>
+    </section>
+<% end %>

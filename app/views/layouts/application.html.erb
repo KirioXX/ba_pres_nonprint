@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BaPresNonprint</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body data-hijacking="on" data-animation="scaleDown">
+<section class="cd-section visible">
+  <div>
+    <div class="content">
+      <span class="title">Page Scroll Effects</span>
+    </div>
+  </div>
+</section>
+
+      <%= yield %>
+    </div>
+  </div>
+</section>
+<nav>
+  <ul class="cd-vertical-nav">
+    <li><a href="#0" class="cd-prev inactive">Next</a></li>
+    <li><a href="#0" class="cd-next">Prev</a></li>
+  </ul>
+</nav> <!-- .cd-vertical-nav -->
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</body>
+</html>

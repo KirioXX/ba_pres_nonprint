@@ -1,0 +1,25 @@
+# encoding: utf-8
+
+<span class="content-inner">
+
+  <% if page.page_type != 0 %>
+    <h1><%= page.title %></h1>
+      <%= case page.page_type
+            when 1 then simple_format(page.body)
+            when 2 then page.image
+            else        "NULL"
+          end %>
+    <% else %>
+      <strong>Html:</strong>
+      <%= page.html %>
+    <% end %>
+
+  <div class="content-bottom">
+    <span class="left">
+      Ben Wunderlich <%= Date.today.strftime('%d.%m.%Y') %>
+    </span>
+    <span class="right">
+       Folie: <%= page.number %>
+    </span>
+  </div>
+</span>

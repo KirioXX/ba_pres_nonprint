@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @page.title %>
+</p>
+
+<p>
+  <strong>Page type:</strong>
+  <%= @page.page_type %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @page.body %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @page.image %>
+</p>
+
+<p>
+  <strong>Html:</strong>
+  <%= @page.html %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @page.number %>
+</p>
+
+<p>
+  <strong>Custom css:</strong>
+  <%= @page.custom_css %>
+</p>
+
+<p>
+  <strong>Custom js:</strong>
+  <%= @page.custom_js %>
+</p>
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>
