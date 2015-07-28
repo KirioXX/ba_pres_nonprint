@@ -80,7 +80,23 @@ body[data-hijacking="on"] {
       >h1{
         line-height: normal;
       }
-      
+
+      section.facade-minimal{
+        top: -70px;
+        background-color: #fff;
+
+        .reload-button {
+          display: block;
+          width: 20px;
+          top: 18px;
+          height: 20px;
+          position: absolute;
+          left: 85px;
+          cursor: pointer;
+          z-index: 100;
+        }
+      }
+
       ul{
         position: relative;
         top: 30px;
@@ -90,6 +106,7 @@ body[data-hijacking="on"] {
           list-style: decimal;
           font-size: 70px;;
         }
+
       }
 
       .content-bottom{

@@ -10,8 +10,10 @@
             else        "NULL"
           end %>
     <% else %>
-      <strong>Html:</strong>
-      <%= page.html %>
+      <section class="facade-minimal" data-url="/examples/show?name=<%= page.html %>">
+        <div class="reload-button"></div>
+        <iframe src="/examples/show?name=<%= page.html %>" frameborder="0" width="100%" height="750"></iframe>
+      </section>
     <% end %>
 
   <div class="content-bottom">
