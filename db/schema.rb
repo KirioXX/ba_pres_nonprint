@@ -11,19 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717143346) do
+ActiveRecord::Schema.define(version: 20150730222628) do
 
   create_table "pages", force: :cascade do |t|
     t.string   "title"
     t.integer  "page_type"
     t.text     "body"
-    t.string   "image"
-    t.text     "html"
+    t.string   "html"
     t.integer  "number"
     t.string   "custom_css"
     t.string   "custom_js"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end

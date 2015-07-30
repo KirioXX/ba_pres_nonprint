@@ -50,3 +50,6 @@ gem 'rails_admin', '~> 0.6.8'
 
 #Page effect
 gem 'bourbon'
+
+#Paperclip
+gem 'paperclip', '~> 4.2'
