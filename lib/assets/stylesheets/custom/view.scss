@@ -1,0 +1,459 @@
+@font-face {
+  font-family: 'swistblnk_monthoersregular';
+  src: url('../fonts/swistblnk_monthoers/monthoers-webfont.eot');
+  src: url('../fonts/swistblnk_monthoers/monthoers-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/swistblnk_monthoers/monthoers-webfont.woff2') format('woff2'),
+  url('../fonts/swistblnk_monthoers/monthoers-webfont.woff') format('woff'),
+  url('../fonts/swistblnk_monthoers/monthoers-webfont.ttf') format('truetype'),
+  url('../fonts/swistblnk_monthoers/monthoers-webfont.svg#swistblnk_monthoersregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.container.main-wrapper {
+  margin-top: 140px;
+}
+a{
+  color: #00BCD4;
+}
+.top-links {
+  margin: 10px 0;
+}
+.top-links li {
+  position: relative;
+  margin-left: 20px;
+  display: inline-flex;
+  vertical-align: middle;
+  line-height: 25px;
+}
+.navbar-brand {
+  font-family: swistblnk_monthoersregular;
+  font-size: 75px;
+  display: block;
+  margin-top: -15px;
+  line-height: 105px;
+}
+.navbar-default .navbar-nav> li.cart >a {
+  display: inline-block;
+  border: 3px solid;
+  border-radius: 100%;
+  font-size: 30px;
+  color: #FF5722;
+  width: 64px;
+  height: 64px;
+}
+.cart-summery {
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  left: -5px;
+}
+.cart-summery span {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+  color: #B6B6B6;
+}
+.cart-summery span.price {
+  font-size: 25px;
+  color: #00BCD4;
+}
+.cart .glyphicon.glyphicon-shopping-cart {
+  font-size: 30px;
+  line-height: 27px;
+}
+.top-links a.glyphicon.glyphicon-user {
+  text-align: right;
+  font-size: 20px;
+}
+.bottom-nav {
+  border: 1px solid #B6B6B6;
+}
+.bottom-nav .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-default {
+  border: none;
+  background-color: #FFF;
+}
+.row.review ul {
+  font-size: 18px;
+  padding-left: 20px;
+  padding-right: 5px;
+}
+.row.options {
+  margin: 20px 0;
+}
+.options button {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 300px;
+  height: 44px;
+  border: 2px solid #B6B6B6;
+  border-radius: 40px;
+  background: transparent;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+.open>.dropdown-menu{
+  width: 100%
+}
+.row.button-box {
+  margin-bottom: 20px;
+}
+.addToCart-block {
+  border-bottom: 1px solid #eee;
+}
+.addToCart-block .price {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #00BCD4;
+}
+input.cart-quantity {
+  display: block;
+  width: 130px;
+  height: 44px;
+  border: 2px solid #B6B6B6;
+  border-radius: 40px;
+  background: transparent;
+  letter-spacing: 1px;
+  font-size: 15px;
+  padding: 0 10px;
+}
+.addToCart {
+  display: block;
+  height: 42px;
+  line-height: 31px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #FF5722;
+  width: 100%;
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+  color: #FF5722;
+  outline: 0;
+  background: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-border-radius: 42px;
+  -moz-border-radius: 42px;
+  -ms-border-radius: 42px;
+  -o-border-radius: 42px;
+  border-radius: 42px;
+  font-size: .88235294em;
+  -webkit-transition: background .3s,color .3s,width .5s,border .3s;
+  -moz-transition: background .3s,color .3s,width .5s,border .3s;
+  -o-transition: background .3s,color .3s,width .5s,border .3s;
+  -ms-transition: background .3s,color .3s,width .5s,border .3s;
+  transition: background .3s,color .3s,width .5s,border .3s;
+}
+.addToCart:hover{
+  background: #FF5722;
+  border-color: #FF5722;
+  color: #FFF;
+}
+.top-links {
+  margin: 10px 0;
+}
+.top-links li {
+  position: relative;
+  margin-left: 20px;
+  display: inline-flex;
+  vertical-align: middle;
+  line-height: 25px;
+}
+.navbar-default .navbar-nav> li.cart >a {
+  display: inline-block;
+  border: 3px solid;
+  border-radius: 100%;
+  font-size: 30px;
+  color: #FF5722;
+  width: 64px;
+  height: 64px;
+}
+.cart-summery {
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  left: -5px;
+}
+.cart-summery span {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+  color: #B6B6B6;
+}
+.cart-summery span.price {
+  font-size: 25px;
+  color: #00BCD4;
+  margin-top: 0;
+}
+.cart .glyphicon.glyphicon-shopping-cart {
+  font-size: 30px;
+  line-height: 27px;
+}
+.top-links a.glyphicon.glyphicon-user {
+  text-align: right;
+  font-size: 20px;
+}
+.bottom-nav {
+  border: 1px solid #B6B6B6;
+}
+.bottom-nav .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom-nav .container li.active > a{
+  color: #000;
+  background-color: #FFF;
+  border-bottom: 4px solid #00BCD4;
+}
+.bottom-nav .container li.active > a:hover{
+  border-bottom: 4px solid #00BCD4;
+}
+.bottom-nav .container li > a:hover{
+  background-color: #e7e7e7;
+  border-bottom: 4px solid #e7e7e7;
+}
+.navbar-default {
+  border: none;
+  background-color: #FFF;
+  margin-bottom: 0;
+}
+.breadcrumb{
+  background-color: #FFF;
+
+}
+.row.review ul {
+  font-size: 18px;
+  padding-left: 20px;
+  padding-right: 5px;
+}
+.row.options {
+  margin: 20px 0;
+}
+.options button {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 300px;
+  height: 44px;
+  border: 2px solid #B6B6B6;
+  border-radius: 40px;
+  background: transparent;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+.row.button-box {
+  margin-bottom: 20px;
+}
+.addToCart-block {
+  border-bottom: 1px solid #eee;
+}
+.price {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #00BCD4;
+}
+.thumbnail{
+  text-align: center;
+}
+.thumbnail h3{
+  color: #FF5722;
+}
+.thumbnail .price{
+  font-size: 25px;
+  font-weight: normal;
+}
+.border{
+  border-bottom: 1px solid #eee;
+}
+.footer div.row-height{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.footer div.row-height > div:nth-child(-n+2){
+  border-right: 1px solid #eee;
+}
+.footer .content{
+  padding: 20px;
+  height: 100%;
+}
+.footer .content.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: swistblnk_monthoersregular;
+  font-size: 110px;
+}
+.footer-title {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #7b7b7b;
+}
+.footer ul {
+  padding: 0;
+}
+.footer li {
+  list-style: none;
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+.footer li a{
+  color: #000;
+  text-decoration: none;
+}
+.footer li a.fa {
+  color: #FFF;
+  background-color: #727272;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 100%;
+  font-size: 40px;
+  text-decoration: none;
+}
+/* content styles */
+
+.inside {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.inside-full-height {
+  /*
+  // if you want to give content full height give him height: 100%;
+  // with content full height you can't apply margins to the content
+  // content full height does not work in ie http://stackoverflow.com/questions/27384433/ie-display-table-cell-child-ignores-height-100
+  */
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* columns of same height styles */
+
+.row-height {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+.col-height {
+  display: table-cell;
+  float: none;
+  height: 100%;
+}
+.col-top {
+  vertical-align: top;
+}
+.col-middle {
+  vertical-align: middle;
+}
+.col-bottom {
+  vertical-align: bottom;
+}
+
+@media (min-width: 480px) {
+  .row-xs-height {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+  }
+  .col-xs-height {
+    display: table-cell;
+    float: none;
+    height: 100%;
+  }
+  .col-xs-top {
+    vertical-align: top;
+  }
+  .col-xs-middle {
+    vertical-align: middle;
+  }
+  .col-xs-bottom {
+    vertical-align: bottom;
+  }
+}
+
+@media (min-width: 768px) {
+  .row-sm-height {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+  }
+  .col-sm-height {
+    display: table-cell;
+    float: none;
+    height: 100%;
+  }
+  .col-sm-top {
+    vertical-align: top;
+  }
+  .col-sm-middle {
+    vertical-align: middle;
+  }
+  .col-sm-bottom {
+    vertical-align: bottom;
+  }
+}
+
+@media (min-width: 992px) {
+  .row-md-height {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+  }
+  .col-md-height {
+    display: table-cell;
+    float: none;
+    height: 100%;
+  }
+  .col-md-top {
+    vertical-align: top;
+  }
+  .col-md-middle {
+    vertical-align: middle;
+  }
+  .col-md-bottom {
+    vertical-align: bottom;
+  }
+}
+
+@media (min-width: 1200px) {
+  .row-lg-height {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+  }
+  .col-lg-height {
+    display: table-cell;
+    float: none;
+    height: 100%;
+  }
+  .col-lg-top {
+    vertical-align: top;
+  }
+  .col-lg-middle {
+    vertical-align: middle;
+  }
+  .col-lg-bottom {
+    vertical-align: bottom;
+  }
+}

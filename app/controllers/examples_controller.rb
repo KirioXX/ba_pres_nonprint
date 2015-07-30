@@ -1,6 +1,8 @@
 class ExamplesController < ApplicationController
+  layout 'examples'
   def show
-    @page = params[:name]
-    render "examples/show", :layout => false
+  end
+
+  def view
   end
 end

@@ -3,16 +3,16 @@
 <span class="content-inner">
 
   <% if page.page_type != 0 %>
-    <h1><%= page.title %></h1>
+
       <%= case page.page_type
-            when 1 then simple_format(page.body)
+            when 1 then simple_format('<h1>'+page.title+'</h1>'+page.body)
             when 2 then page.image
             else        "NULL"
           end %>
     <% else %>
-      <section class="facade-minimal" data-url="/examples/show?name=<%= page.html %>">
+      <section class="facade-minimal" data-url="/examples/<%= page.html %>">
         <div class="reload-button"></div>
-        <iframe src="/examples/show?name=<%= page.html %>" frameborder="0" width="100%" height="750"></iframe>
+        <iframe data-frameSrc="/examples/<%= page.html %>" frameborder="0" width="100%" height="750"></iframe>
       </section>
     <% end %>
 

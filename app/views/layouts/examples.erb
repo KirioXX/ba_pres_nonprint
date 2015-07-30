@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel="stylesheet" href="<%= path_to_stylesheet 'examples' %>">
+  <script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'examples'%>"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render :partial => 'layouts/examples_partials/examples_head' %>
+<%= yield %>
+<%= render :partial => 'layouts/examples_partials/examples_footer' %>
+</body>
+</html>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'examples/show'
+  get 'examples/view'
 
   resources :pages
 
