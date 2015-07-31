@@ -81,6 +81,12 @@ body[data-hijacking="on"] {
         line-height: normal;
       }
 
+      section.image-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       section.facade-minimal{
         top: -70px;
         background-color: #fff;
