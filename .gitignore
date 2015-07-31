@@ -21,3 +21,5 @@ lib/assets/images/
 lib/assets/fonts/
 
 app/assets/images/examples/
+*.jpg
+*.png
