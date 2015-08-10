@@ -1,147 +1,100 @@
 #encoding: utf-8
-<div class="container main-wrapper">
-  <ol class="breadcrumb">
-    <li><a href="#">Start</a></li>
-    <li><a href="#">Kleidung</a></li>
-    <li>Supergeiler Schlüpper</li>
-  </ol>
-  <div class="row">
-    <div class="col-md-5">
-      <%= image_tag 'examples/44574_slip-batman.jpg', :class => 'img-responsive' %>
-    </div>
-    <div class="col-md-7 pull-right addToCart-block">
-      <div class="row">
-        <div class="col-md-9 col-xs-12">
-          <h1>Supergeiler Schlüpper</h1>
-        </div>
-        <div class="col-md-3 col-xs-12">
-          <div class="price">€10,00</div>
-        </div>
-      </div>
-      <div class="row review">
-        <ul class="pull-left">
-          <li class="glyphicon glyphicon-star-empty"></li>
-          <li class="glyphicon glyphicon-star-empty"></li>
-          <li class="glyphicon glyphicon-star-empty"></li>
-          <li class="glyphicon glyphicon-star-empty"></li>
-          <li class="glyphicon glyphicon-star-empty"></li>
-          <li class="glyphicon glyphicon-star-empty"></li>
-        </ul>
-        <span class="pull-left">(0 Bewertungen)</span>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <blockquote>
-            <p>Ich bin Batman *_* !</p>
-            <footer>Batman</footer>
-          </blockquote>
-
-        </div>
-      </div>
-      <div class="row options">
-        <div class="btn-group ">
-          <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Model auswählen
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li>
-              <a href="#">Batman</a>
-            </li>
-            <li>
-              <a href="#">Superman</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row button-box">
-        <div class="col-md-4">
-          <input class="cart-quantity" type="number" min="1" value="1" name="quantity">
-        </div>
-        <div class="col-md-8">
-          <button class="btn btn-default addToCart" type="submit">
-            <span>In den Warenkorb</span>
-          </button>
-        </div>
-      </div>
-    </div>
+<ol class="breadcrumb">
+  <li><a href="#">Start</a></li>
+  <li><a href="#">Kleidung</a></li>
+  <li>Supergeiler Schlüpper</li>
+</ol>
+<div class="row">
+  <div class="col-md-5">
+    <%= image_tag(@product.image.url(:medium), :class => "img-responsive" ) %>
   </div>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="page-header">
-        <h3>Produktinformationen</h3>
+  <div class="col-md-7 pull-right addToCart-block">
+    <div class="row">
+      <div class="col-md-9 col-xs-12">
+        <h1><%= @product.name %></h1>
       </div>
-      <dl>
-        <dt>Besonderheiten:</dt>
-        <dd>Modische Schlüpper für kleine und große Batman Fans -Lizenzware- angenehm weich und hautsympatisch durch 100% Baumwolle mit schönem Druckmotiv </dd>
-        <dt>Material:</dt>
-        <dd>100% Baumwolle</dd>
-        <dt>Farben:</dt>
-        <dd>schwarz</dd>
-        <dt>Pflegehinweise:</dt>
-        <dd>waschbar bei 40°</dd>
-      </dl>
-    </div>
-    <div class="col-md-6">
-      <div class="page-header">
-        <h3>Kundenbewertungen</h3>
+      <div class="col-md-3 col-xs-12">
+        <div class="price">€<%= @product.price %></div>
       </div>
-      Noch keine Bewertung vorhanden.
     </div>
-  </div>
-  <div class="row border">
-    <div class="page-header">
-      <h3>Haben Sie diese Artikel schon gesehen?</h3>
+    <div class="row review">
+      <ul class="pull-left">
+        <li class="glyphicon glyphicon-star-empty"></li>
+        <li class="glyphicon glyphicon-star-empty"></li>
+        <li class="glyphicon glyphicon-star-empty"></li>
+        <li class="glyphicon glyphicon-star-empty"></li>
+        <li class="glyphicon glyphicon-star-empty"></li>
+        <li class="glyphicon glyphicon-star-empty"></li>
+      </ul>
+      <span class="pull-left">(0 Bewertungen)</span>
     </div>
     <div class="row">
-      <div class="col-sm-6 col-md-3">
-        <div class="thumbnail">
-          <%= image_tag 'examples/spiderman_soaker.grid-6x2.jpg', :alt => 'Spiderman Web Shooter'  %>
-          <div class="caption">
-            <h3>O.O</h3>
-            <p>
-            <div class="price">€20,00</div>
-            </p>
-            <p><a href="#" class="btn btn-default addToCart" role="button">In den Warenkorb</a></p>
-          </div>
-        </div>
+      <div class="col-md-12">
+        <blockquote><%= simple_format(@product.shortdesc) %>
+        </blockquote>
+
       </div>
-      <div class="col-sm-6 col-md-3">
-        <div class="thumbnail">
-          <%= image_tag 'examples/51Lv0V8YaCL._SY300_.jpg', :alt => "Batman Socken mit Cape" %>
-          <div class="caption">
-            <h3>Supergeile Socken</h3>
-            <p>
-            <div class="price">€10,00</div>
-            </p>
-            <p><a href="#" class="btn btn-default addToCart" role="button">In den Warenkorb</a></p>
-          </div>
-        </div>
+    </div>
+    <div class="row options">
+      <div class="btn-group ">
+        <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Model auswählen
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Batman</a>
+          </li>
+          <li>
+            <a href="#">Superman</a>
+          </li>
+        </ul>
       </div>
-      <div class="col-sm-6 col-md-3">
-        <div class="thumbnail">
-          <%= image_tag 'examples/51iHTc4Qd3L._SY300_.jpg', :alt => 'Superman Socken mit Cape' %>
-          <div class="caption">
-            <h3>Super Socken</h3>
-            <p>
-            <div class="price">€10,00</div>
-            </p>
-            <p><a href="#" class="btn btn-default addToCart" role="button">In den Warenkorb</a></p>
-          </div>
-        </div>
+    </div>
+    <div class="row button-box">
+      <div class="col-md-4">
+        <input class="cart-quantity" type="number" min="1" value="1" name="quantity">
       </div>
-      <div class="col-sm-6 col-md-3">
-        <div class="thumbnail">
-          <%= image_tag 'examples/httq_batman_batarang_letter_opener.jpg', :alt => 'Batman Baterang Brieföffner' %>
-          <div class="caption">
-            <h3>Kinderspielzeug</h3>
-            <p>
-            <div class="price">€15,00</div>
-            </p>
-            <p><a href="#" class="btn btn-default addToCart" role="button">In den Warenkorb</a></p>
-          </div>
+      <div class="col-md-8">
+        <button class="btn btn-default addToCart" type="submit">
+          <span>In den Warenkorb</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="page-header">
+      <h3>Produktinformationen</h3>
+    </div>
+   <%= simple_format(@product.description) %>
+  </div>
+  <div class="col-md-6">
+    <div class="page-header">
+      <h3>Kundenbewertungen</h3>
+    </div>
+    Noch keine Bewertung vorhanden.
+  </div>
+</div>
+<div class="row border">
+  <div class="page-header">
+    <h3>Haben Sie diese Artikel schon gesehen?</h3>
+  </div>
+  <div class="row">
+    <% @thumb.each do |thumb| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <%= image_tag(thumb.image.url(:small)) %>
+        <div class="caption">
+          <h3><%= thumb.name %></h3>
+          <p>
+          <div class="price">€<%= thumb.price %></div>
+          </p>
+          <p><a href="#" class="btn btn-default addToCart" role="button">In den Warenkorb</a></p>
         </div>
       </div>
     </div>
+    <% end %>
   </div>
 </div>

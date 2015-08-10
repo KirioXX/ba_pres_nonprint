@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+  get 'products/edit'
+
+  get 'products/new'
+
+  get 'products/update'
+
   get 'examples/show'
-  get 'examples/view'
+
+  get '/examples/view/:id', to: 'examples#view'
 
   resources :pages
 

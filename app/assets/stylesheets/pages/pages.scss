@@ -81,7 +81,7 @@ body[data-hijacking="on"] {
         line-height: normal;
       }
 
-      section.image-wrapper{
+      > section.image-wrapper{
         display: flex;
         justify-content: center;
         align-items: center;

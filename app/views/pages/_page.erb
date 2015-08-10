@@ -5,14 +5,14 @@
   <% if page.page_type != 0 %>
 
       <%= case page.page_type
-            when 1 then simple_format('<h1>'+page.title+'</h1>'+page.body)
-            when 2 then simple_format('<section class="image-wrapper">'+image_tag(page.image.url(:large))+'</section>')
+            when 1 then simple_format('<h1>'+page.title+'</h1><div class="text">'+page.body+'</div>')
+            when 2 then simple_format('<div class="image-wrapper">'+image_tag(page.image.url(:large))+'</div>')
             else        "NULL"
           end %>
     <% else %>
-      <section class="facade-minimal" data-url="/examples/<%= page.html %>">
+      <section class="facade-minimal" data-url="/examples/<%= page.html %>/1">
         <div class="reload-button"></div>
-        <iframe data-frameSrc="/examples/<%= page.html %>" frameborder="0" width="100%" height="750"></iframe>
+        <iframe data-frameSrc="/examples/<%= page.html %>/1" frameborder="0" width="100%" height="750"></iframe>
       </section>
     <% end %>
 
