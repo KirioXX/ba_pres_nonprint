@@ -6,7 +6,17 @@
 </ol>
 <div class="row">
   <div class="col-md-5">
-    <%= image_tag(@product.image.url(:medium), :class => "img-responsive" ) %>
+    <%= image_tag(@product.image.url(:medium), :class => "img-responsive", :id =>'main-img' ) %>
+    <div id="loder-container" style="display: none;">
+      <svg width="300px" height="200px" viewBox="0 0 187.3 93.7" preserveAspectRatio="xMidYMid meet">
+        <path style="-webkit-filter:url(#f2)" stroke="#777777" id="outline" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+				M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1
+				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+        <path id="outline-bg" opacity="0.05" fill="none" stroke="#777777" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+				M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1
+				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+      </svg>
+    </div>
   </div>
   <div class="col-md-7 pull-right addToCart-block">
     <div class="row">
@@ -14,7 +24,7 @@
         <h1><%= @product.name %></h1>
       </div>
       <div class="col-md-3 col-xs-12">
-        <div class="price">€<%= @product.price %></div>
+        <div class="price">€<span id="main-price"><%= number_with_precision(@product.price, precision: 2) %></span></div>
       </div>
     </div>
     <div class="row review">
@@ -30,7 +40,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <blockquote><%= simple_format(@product.shortdesc) %>
+        <blockquote id="shortdesc"><%= simple_format(@product.shortdesc) %>
         </blockquote>
 
       </div>
@@ -43,10 +53,10 @@
         </button>
         <ul class="dropdown-menu">
           <li>
-            <a href="#">Batman</a>
+            <a data-url="/examples/json/1">Batman</a>
           </li>
           <li>
-            <a href="#">Superman</a>
+            <a data-url="/examples/json/2">Superman</a>
           </li>
         </ul>
       </div>
@@ -68,7 +78,9 @@
     <div class="page-header">
       <h3>Produktinformationen</h3>
     </div>
+    <span id="description" >
    <%= simple_format(@product.description) %>
+    </span>
   </div>
   <div class="col-md-6">
     <div class="page-header">

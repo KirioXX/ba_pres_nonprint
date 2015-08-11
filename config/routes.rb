@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   get 'examples/show'
 
-  get '/examples/view/:id', to: 'examples#view'
+  get '/examples/view/:id' => 'examples#view'
+
+  get '/examples/json/:id' => 'examples#json'
 
   resources :pages
 

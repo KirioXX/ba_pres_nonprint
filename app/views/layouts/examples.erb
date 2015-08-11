@@ -4,20 +4,18 @@
 <head>
   <link rel="stylesheet" href="<%= path_to_stylesheet 'examples' %>">
   <script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'examples'%>"></script>
-  <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
-  <!-- AniJS core library -->
-  <script src="http://anijs.github.io/lib/anijs/anijs-min.js"></script>
-  <!-- Include to use $addClass, $toggleClass or $removeClass -->
-  <script src="http://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js"></script>
-  <!-- The scrollreveal helper-->
-  <script src="http://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal-min.js"></script>
-    <!-- Include AniJS JQuery Events System-->
-    <script src="http://anijs.github.io/lib/anijs/event_systems/jquery/anijs-jquery-event-system-min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <%= render :partial => 'layouts/examples_partials/examples_head' %>
 <div class="container main-wrapper"><%= yield %>
 <%= render :partial => 'layouts/examples_partials/examples_footer' %></div>
+<script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'anijs/anijs-min'%>"></script>
+<script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'anijs/anijs-helper-dom-min'%>"></script>
+<script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'anijs/anijs-helper-scrollreveal-min'%>"></script>
+<script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'anijs/anijs-jquery-event-system-min'%>"></script>
+<script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'greensock/TweenMax.min'%>"></script>
+<script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'greensock/DrawSVGPlugin.min'%>"></script>
+<script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'custom/'+params[:action]%>"></script>
 </body>
 </html>
