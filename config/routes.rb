@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'products/edit'
+  resources :categories
 
-  get 'products/new'
+  resources :reviews
 
-  get 'products/update'
+  get 'examples/:id' => 'examples#show'
 
-  get 'examples/show'
+  get 'examples/show/:id' => 'examples#show'
 
   get '/examples/view/:id' => 'examples#view'
 

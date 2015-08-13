@@ -2,4 +2,30 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "anijs/anicollection";
+@import "custom/show";
 @import "custom/view";
+
+.overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.75);
+  z-index: 1040;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  .overlay-inner{
+    background: #FFF;
+    opacity: 1;
+    padding: 20px;
+    box-shadow: 3px 3px 13px #ccc;
+
+    #closeButton {
+      cursor: pointer;
+    }
+  }.active{
+     display: block;
+   }
+}

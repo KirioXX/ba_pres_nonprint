@@ -22,3 +22,14 @@ lib/assets/fonts/*
 
 *.jpg
 *.png
+app/assets/fonts/swistblnk_monthoers/generator_config.txt
+app/assets/fonts/swistblnk_monthoers/monthoers-demo.html
+app/assets/fonts/swistblnk_monthoers/monthoers-webfont.eot
+app/assets/fonts/swistblnk_monthoers/monthoers-webfont.svg
+app/assets/fonts/swistblnk_monthoers/monthoers-webfont.ttf
+app/assets/fonts/swistblnk_monthoers/monthoers-webfont.woff
+app/assets/fonts/swistblnk_monthoers/monthoers-webfont.woff2
+app/assets/fonts/swistblnk_monthoers/specimen_files/easytabs.js
+app/assets/fonts/swistblnk_monthoers/specimen_files/grid_12-825-55-15.css
+app/assets/fonts/swistblnk_monthoers/stylesheet.css
+app/assets/fonts/swistblnk_monthoers/specimen_files/specimen_stylesheet.css

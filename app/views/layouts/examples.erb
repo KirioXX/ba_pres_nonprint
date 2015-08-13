@@ -8,14 +8,25 @@
 </head>
 <body>
 <%= render :partial => 'layouts/examples_partials/examples_head' %>
-<div class="container main-wrapper"><%= yield %>
-<%= render :partial => 'layouts/examples_partials/examples_footer' %></div>
+<div class="container main-wrapper">
+  <%= yield %>
+  <%= render :partial => 'layouts/examples_partials/examples_footer' %>
+</div>
+<div class="overlay">
+  <span class="overlay-inner">
+    <span id="closeButton" class="fa fa-times-circle-o fa-lg"></span>
+    <div id="overlay-content">
+
+    </div>
+  </span>
+</div>
 <script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'anijs/anijs-min'%>"></script>
 <script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'anijs/anijs-helper-dom-min'%>"></script>
 <script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'anijs/anijs-helper-scrollreveal-min'%>"></script>
 <script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'anijs/anijs-jquery-event-system-min'%>"></script>
 <script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'greensock/TweenMax.min'%>"></script>
 <script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'greensock/DrawSVGPlugin.min'%>"></script>
+<script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'custom/main'%>"></script>
 <script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'custom/'+params[:action]%>"></script>
 </body>
 </html>

@@ -15,6 +15,5 @@
 //= require turbolinks
 //= require pages/velocity.min
 //= require pages/velocity.ui.min
-//= require pages/modernizr
 //= require pages/main
 //= require_tree .

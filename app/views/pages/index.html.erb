@@ -1,9 +1,9 @@
 <% @pages.each do |page| %>
-    <section class="cd-section">
+    <section class="cd-section <%= 'visible' if page.number == 1 %>" data-page="<%= page.number %>">
       <div>
-        <div class="content">
+        <span class="content">
           <%= render :partial => 'pages/page', :object => page %>
-        </div>
+        </span>
       </div>
     </section>
 <% end %>

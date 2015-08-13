@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'swistblnk_monthoersregular';
-  src: url('fonts/swistblnk_monthoers/monthoers-webfont.eot');
-  src: url('fonts/swistblnk_monthoers/monthoers-webfont.eot?#iefix') format('embedded-opentype'),
-  url('fonts/swistblnk_monthoers/monthoers-webfont.woff2') format('woff2'),
-  url('fonts/swistblnk_monthoers/monthoers-webfont.woff') format('woff'),
-  url('fonts/swistblnk_monthoers/monthoers-webfont.ttf') format('truetype'),
-  url('fonts/swistblnk_monthoers/monthoers-webfont.svg#swistblnk_monthoersregular') format('svg');
+  src: font-url('swistblnk_monthoers/monthoers-webfont.eot');
+  src: font-url('swistblnk_monthoers/monthoers-webfont.eot?#iefix') format('embedded-opentype'),
+  font-url('swistblnk_monthoers/monthoers-webfont.woff2') format('woff2'),
+  font-url('swistblnk_monthoers/monthoers-webfont.woff') format('woff'),
+  font-url('swistblnk_monthoers/monthoers-webfont.ttf') format('truetype'),
+  font-url('swistblnk_monthoers/monthoers-webfont.svg#swistblnk_monthoersregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -17,14 +17,19 @@ a{
 }
 .top-links {
   margin: 10px 0;
+
+ li {
+   position: relative;
+   margin-left: 20px;
+   display: inline-flex;
+   vertical-align: middle;
+   line-height: 25px;
+ }
+  a{
+    cursor: pointer;
+  }
 }
-.top-links li {
-  position: relative;
-  margin-left: 20px;
-  display: inline-flex;
-  vertical-align: middle;
-  line-height: 25px;
-}
+
 .navbar-brand {
   font-family: swistblnk_monthoersregular;
   font-size: 75px;
@@ -155,7 +160,27 @@ input.cart-quantity {
   -o-transition: background .3s,color .3s,width .5s,border .3s;
   -ms-transition: background .3s,color .3s,width .5s,border .3s;
   transition: background .3s,color .3s,width .5s,border .3s;
+  overflow: hidden;
 }
+.addToCart.filled{
+   background-color: #FF5722;
+   color:#FF5722;
+}
+.addToCart.filled:hover{
+  background-color: #FF5722;
+  color:#FF5722;
+}
+.addToCart.filled:active{
+  background-color: #FF5722;
+  color:#FF5722;
+}
+.addToCart.clicked{
+  width: 10%;
+}
+.addToCart.clicked-min{
+  width: 18%;
+}
+
 .addToCart:hover{
   background: #FF5722;
   border-color: #FF5722;
@@ -208,6 +233,7 @@ input.cart-quantity {
   display: inline-flex;
   vertical-align: middle;
   line-height: 25px;
+  cursor: pointer;
 }
 .navbar-default .navbar-nav> li.cart >a {
   display: inline-block;
@@ -309,13 +335,18 @@ input.cart-quantity {
 }
 .thumbnail{
   text-align: center;
-}
-.thumbnail h3{
-  color: #FF5722;
-}
-.thumbnail .price{
-  font-size: 25px;
-  font-weight: normal;
+
+  h3{
+    color: #FF5722;
+    min-height: 52px;
+  }
+  .price{
+    font-size: 25px;
+    font-weight: normal;
+  }
+  a:hover{
+    text-decoration: none;
+  }
 }
 .border{
   border-bottom: 1px solid #eee;
@@ -366,6 +397,9 @@ input.cart-quantity {
   border-radius: 100%;
   font-size: 40px;
   text-decoration: none;
+}
+#searchButton{
+  cursor: pointer;
 }
 #searchbar{
   display: none;

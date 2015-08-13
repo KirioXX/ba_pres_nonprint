@@ -1,1 +1,22 @@
-Ich werde ein Listing :D
+<ol class="breadcrumb">
+  <li><a href="#">Start</a></li>
+  <li>Kleidung</li>
+</ol>
+<div class="row">
+  <% @products.each do |product| %>
+      <div class="col-sm-6 col-md-3 thumb-element disabled">
+        <a href="http://localhost:3000/examples/view/<%= product.id %>">
+        <div class="thumbnail">
+          <%= image_tag(product.image.url(:small)) %>
+          <div class="caption">
+            <h3 style="min-height: 52px;"><%= product.name %></h3>
+            <p>
+            <div class="price">€<%= number_with_precision(product.price, precision: 2 ) %></div>
+            </p>
+            <p><a href="#" class="btn btn-default addToCart min" role="button" data-prod="<%= product.id %>">In den Warenkorb</a></p>
+          </div>
+        </div>
+        </a>
+      </div>
+  <% end %>
+</div>

@@ -53,3 +53,6 @@ gem 'bourbon'
 
 #Paperclip
 gem 'paperclip', '~> 4.2'
+
+#Fake Products
+gem 'faker'
