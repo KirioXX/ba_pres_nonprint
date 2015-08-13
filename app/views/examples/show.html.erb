@@ -5,7 +5,7 @@
 <div class="row">
   <% @products.each do |product| %>
       <div class="col-sm-6 col-md-3 thumb-element disabled">
-        <a href="http://localhost:3000/examples/view/<%= product.id %>">
+        <a href="#" onclick="getProduct('http://localhost:3000/examples/view/<%= product.id %>');return false">
         <div class="thumbnail">
           <%= image_tag(product.image.url(:small)) %>
           <div class="caption">
@@ -20,3 +20,4 @@
       </div>
   <% end %>
 </div>
+<script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'custom/show'%>"></script>

@@ -9,14 +9,41 @@
 <body>
 <%= render :partial => 'layouts/examples_partials/examples_head' %>
 <div class="container main-wrapper">
+  <div id="content-main">
   <%= yield %>
+  </div>
+  <div class="main-loader loder-container" style="display: none;">
+    <svg width="300px" height="200px" viewBox="0 0 187.3 93.7" preserveAspectRatio="xMidYMid meet">
+      <path style="-webkit-filter:url(#f2)" stroke="#777777" id="outline" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+				M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1
+				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+      <path id="outline-bg" opacity="0.05" fill="none" stroke="#777777" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+				M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1
+				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+    </svg>
+  </div>
   <%= render :partial => 'layouts/examples_partials/examples_footer' %>
 </div>
 <div class="overlay">
   <span class="overlay-inner">
     <span id="closeButton" class="fa fa-times-circle-o fa-lg"></span>
     <div id="overlay-content">
-
+      <form>
+        <div class="form-group">
+          <label for="beispielFeldEmail1">Email-Adresse</label>
+          <input type="email" class="form-control" id="beispielFeldEmail1" placeholder="Email-Adresse">
+        </div>
+        <div class="form-group">
+          <label for="beispielFeldPasswort1">Passwort</label>
+          <input type="password" class="form-control" id="beispielFeldPasswort1" placeholder="Passwort">
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Angemeldet bleiben?
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">Login</button>
+      </form>
     </div>
   </span>
 </div>
@@ -27,6 +54,5 @@
 <script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'greensock/TweenMax.min'%>"></script>
 <script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'greensock/DrawSVGPlugin.min'%>"></script>
 <script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'custom/main'%>"></script>
-<script type="text/javascript" charset="utf-8" src="<%= path_to_javascript 'custom/'+params[:action]%>"></script>
 </body>
 </html>

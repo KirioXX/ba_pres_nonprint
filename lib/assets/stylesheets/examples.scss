@@ -21,11 +21,23 @@
     opacity: 1;
     padding: 20px;
     box-shadow: 3px 3px 13px #ccc;
+    display:none;
 
     #closeButton {
       cursor: pointer;
+      float: right;
+      position: relative;
+      top: -8px;
     }
-  }.active{
+  }
+  .overlay-inner.active{
      display: block;
    }
+}
+.main-loader {
+  min-height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
