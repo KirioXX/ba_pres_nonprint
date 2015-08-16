@@ -13,7 +13,7 @@
             <p>
             <div class="price">€<%= number_with_precision(product.price, precision: 2 ) %></div>
             </p>
-            <p><a href="#" class="btn btn-default addToCart min" role="button" data-prod="<%= product.id %>">In den Warenkorb</a></p>
+            <p><a href="#" class="btn btn-default addToCart min" role="button" onclick="addToCart(this,<%= product.id %>,'min');">In den Warenkorb</a></p>
           </div>
         </div>
         </a>

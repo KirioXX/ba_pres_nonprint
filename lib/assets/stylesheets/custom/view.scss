@@ -58,7 +58,11 @@ a{
   font-weight: bold;
   color: #B6B6B6;
 }
-.cart-summery span.price {
+.cart-summery span.price span{
+  display: initial;
+  color: #00BCD4;
+}
+.cart-summery span.price{
   font-size: 25px;
   color: #00BCD4;
 }

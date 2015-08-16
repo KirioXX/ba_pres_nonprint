@@ -66,9 +66,12 @@
         <input id="cart-quantity" class="cart-quantity" type="number" min="1" value="1" name="quantity">
       </div>
       <div class="col-md-8">
-        <button class="btn btn-default addToCart" id="addToCart-button" type="submit" data-prod="1">
+        <button class="btn btn-default addToCart" id="addToCart-button" type="submit" onclick="addToCart(this,1,'');">
           <span>In den Warenkorb</span>
         </button>
+        <svg width="42" height="42" style="display:none; position: absolute; left: 45%; top: 0%; z-index: 2000;">
+          <circle cx="21" cy="21" r="21" fill="#FF5722" />
+        </svg>
       </div>
     </div>
   </div>
@@ -103,7 +106,9 @@
           <p>
           <div class="price">€<%= number_with_precision(thumb.price, precision: 2) %></div>
           </p>
-          <p><a href="#" class="btn btn-default addToCart min" role="button" data-prod="<%= thumb.id %>">In den Warenkorb</a></p>
+          <p style="position:relative;"><a href="#" class="btn btn-default addToCart min" role="button" onclick="addToCart(this,<%= thumb.id %>,'min');">In den Warenkorb</a><svg style="display: none;" width="42" height="42">
+            <circle cx="21" cy="21" r="21" fill="#FF5722" />
+          </svg></p>
         </div>
       </div>
     </div>

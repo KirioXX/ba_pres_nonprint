@@ -20,6 +20,10 @@ class ExamplesController < ApplicationController
     render :layout => false
   end
 
+  def cssBMO
+    render :layout => false
+  end
+
   def json
     @product = Product.find(params[:id])
     render :json => @product.to_json(:methods => [:mainImage_url])

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Card Expansion Effect - Demo 4</title>
+  <meta name="description" content="Card Expansion Effect with SVG clipPath" />
+  <meta name="keywords" content="clipPath, svg, effect, layout, expansion, images, grid, polygon" />
+  <meta name="author" content="Claudio Calautti for Codrops" />
+  <link rel="shortcut icon" href="favicon.ico">
+  <style>
+      .BMO,body,html{height:100%}html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}body{background-color:#d8f8f3;display:flex;justify-content:center;align-items:center;font-family:Roboto}.back,.front,.grate,.leftside,.rightside{display:inline-block}.BMOwrap{transform-origin:40% 0;-webkit-perspective:1000px;perspective:1000px}.BMO{width:100%;animation:BMOspin-front 8s linear infinite;-webkit-transform-style:preserve-3d}.BMO,.back,.front{transform-style:preserve-3d}.back,.front{width:200px;height:300px;background-color:#64bea5;position:relative;border:2px solid #000;-webkit-transform-style:preserve-3d}.buttonlong,.buttonround,.eyes,.face,.mouth{position:absolute}.front{-webkit-transform:translateZ(50px) rotateY(0);-moz-transform:translateZ(50px) rotateY(0);-ms-transform:translateZ(50px) rotateY(0);-o-transform:translateZ(50px) rotateY(0);transform:translateZ(50px) rotateY(0)}.back{text-align:center;-webkit-transform:translateZ(-50px) translateX(-300px) rotateY(0);-moz-transform:translateZ(-50px) translateX(-300px) rotateY(0);-ms-transform:translateZ(-50px) translateX(-300px) rotateY(0);-o-transform:translateZ(-50px) translateX(-300px) rotateY(0);transform:translateZ(-50px) translateX(-300px) rotateY(0)}.face{width:150px;height:100px;background-color:#d9ffe8;top:24px;left:24px;border-radius:12px;border:2px solid #000}.eyes{width:10px;height:10px;border-radius:50%;background-color:#2b2b2b;top:30px}.left{left:29px}.right{right:29px}.mouth{width:30px;height:20px;border:2px solid #000;background-color:#264327;border-radius:0 0 20px 20px;left:58px;top:50px}.teeth{width:100%;height:5px;background-color:#fff;border-bottom:1px solid #000}.buttonlong{width:80px;height:12px;border-radius:8px;left:40px;top:138px;transform-style:preserve-3d;-webkit-transform-style:preserve-3d}.buttonlongpart1,.buttonlongpart10,.buttonlongpart2,.buttonlongpart3,.buttonlongpart4,.buttonlongpart5,.buttonlongpart6,.buttonlongpart7,.buttonlongpart8,.buttonlongpart9{position:absolute;top:0;left:0;width:80px;height:12px;border-radius:8px;background-color:#015033}.buttonlongpart1,.buttonlongpart10{border:2px solid #000}.buttonlongpart1{-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);-o-transform:translateZ(0);transform:translateZ(0)}.buttonlongpart2{-webkit-transform:translateZ(1px);-moz-transform:translateZ(1px);-ms-transform:translateZ(1px);-o-transform:translateZ(1px);transform:translateZ(1px)}.buttonlongpart3{-webkit-transform:translateZ(2px);-moz-transform:translateZ(2px);-ms-transform:translateZ(2px);-o-transform:translateZ(2px);transform:translateZ(2px)}.buttonlongpart4{-webkit-transform:translateZ(3px);-moz-transform:translateZ(3px);-ms-transform:translateZ(3px);-o-transform:translateZ(3px);transform:translateZ(3px)}.buttonlongpart5{-webkit-transform:translateZ(4px);-moz-transform:translateZ(4px);-ms-transform:translateZ(4px);-o-transform:translateZ(4px);transform:translateZ(4px)}.buttonlongpart6{-webkit-transform:translateZ(5px);-moz-transform:translateZ(5px);-ms-transform:translateZ(5px);-o-transform:translateZ(5px);transform:translateZ(5px)}.buttonlongpart7{-webkit-transform:translateZ(6px);-moz-transform:translateZ(6px);-ms-transform:translateZ(6px);-o-transform:translateZ(6px);transform:translateZ(6px)}.buttonlongpart8{-webkit-transform:translateZ(7px);-moz-transform:translateZ(7px);-ms-transform:translateZ(7px);-o-transform:translateZ(7px);transform:translateZ(7px)}.buttonlongpart9{-webkit-transform:translateZ(8px);-moz-transform:translateZ(8px);-ms-transform:translateZ(8px);-o-transform:translateZ(8px);transform:translateZ(8px)}.buttonlongpart10{-webkit-transform:translateZ(9px);-moz-transform:translateZ(9px);-ms-transform:translateZ(9px);-o-transform:translateZ(9px);transform:translateZ(9px)}.buttonround{width:16px;height:16px;border-radius:50%;right:40px;top:136px;transform-style:preserve-3d;-webkit-transform-style:preserve-3d}.buttonroundpart1,.buttonroundpart10,.buttonroundpart2,.buttonroundpart3,.buttonroundpart4,.buttonroundpart5,.buttonroundpart6,.buttonroundpart7,.buttonroundpart8,.buttonroundpart9{position:absolute;top:0;left:0;width:16px;height:16px;border-radius:50%;background-color:#003f70}.crossbuttonhider1,.crossbuttonhori1,.crossbuttonvert1{position:absolute;background-color:#fff219}.buttonroundpart1,.buttonroundpart10,.crossbutton1 .crossbuttonhori1,.crossbutton1 .crossbuttonvert1,.crossbutton10 .crossbuttonhori1,.crossbutton10 .crossbuttonvert1{border:2px solid #000}.buttonroundpart1{-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);-o-transform:translateZ(0);transform:translateZ(0)}.buttonroundpart2{-webkit-transform:translateZ(1px);-moz-transform:translateZ(1px);-ms-transform:translateZ(1px);-o-transform:translateZ(1px);transform:translateZ(1px)}.buttonroundpart3{-webkit-transform:translateZ(2px);-moz-transform:translateZ(2px);-ms-transform:translateZ(2px);-o-transform:translateZ(2px);transform:translateZ(2px)}.buttonroundpart4{-webkit-transform:translateZ(3px);-moz-transform:translateZ(3px);-ms-transform:translateZ(3px);-o-transform:translateZ(3px);transform:translateZ(3px)}.buttonroundpart5{-webkit-transform:translateZ(4px);-moz-transform:translateZ(4px);-ms-transform:translateZ(4px);-o-transform:translateZ(4px);transform:translateZ(4px)}.buttonroundpart6{-webkit-transform:translateZ(5px);-moz-transform:translateZ(5px);-ms-transform:translateZ(5px);-o-transform:translateZ(5px);transform:translateZ(5px)}.buttonroundpart7{-webkit-transform:translateZ(6px);-moz-transform:translateZ(6px);-ms-transform:translateZ(6px);-o-transform:translateZ(6px);transform:translateZ(6px)}.buttonroundpart8{-webkit-transform:translateZ(7px);-moz-transform:translateZ(7px);-ms-transform:translateZ(7px);-o-transform:translateZ(7px);transform:translateZ(7px)}.buttonroundpart9{-webkit-transform:translateZ(8px);-moz-transform:translateZ(8px);-ms-transform:translateZ(8px);-o-transform:translateZ(8px);transform:translateZ(8px)}.buttonroundpart10{-webkit-transform:translateZ(9px);-moz-transform:translateZ(9px);-ms-transform:translateZ(9px);-o-transform:translateZ(9px);transform:translateZ(9px)}.yellowcrossbutton{width:45px;height:45px;position:absolute;left:30px;top:180px;transform-style:preserve-3d;-webkit-transform-style:preserve-3d}.crossbuttonhori1{width:45px;height:15px;top:15px;left:0}.crossbuttonvert1{width:15px;height:45px;top:0;left:15px}.crossbuttonhider1{width:41px;height:11px;top:17px;left:2px}.crossbutton1,.crossbutton10,.crossbutton2,.crossbutton3,.crossbutton4,.crossbutton5,.crossbutton6,.crossbutton7,.crossbutton8,.crossbutton9{position:absolute;top:0;left:0}.crossbutton1{-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);-o-transform:translateZ(0);transform:translateZ(0)}.crossbutton2{-webkit-transform:translateZ(1px);-moz-transform:translateZ(1px);-ms-transform:translateZ(1px);-o-transform:translateZ(1px);transform:translateZ(1px)}.crossbutton3{-webkit-transform:translateZ(2px);-moz-transform:translateZ(2px);-ms-transform:translateZ(2px);-o-transform:translateZ(2px);transform:translateZ(2px)}.crossbutton4{-webkit-transform:translateZ(3px);-moz-transform:translateZ(3px);-ms-transform:translateZ(3px);-o-transform:translateZ(3px);transform:translateZ(3px)}.crossbutton5{-webkit-transform:translateZ(4px);-moz-transform:translateZ(4px);-ms-transform:translateZ(4px);-o-transform:translateZ(4px);transform:translateZ(4px)}.crossbutton6{-webkit-transform:translateZ(5px);-moz-transform:translateZ(5px);-ms-transform:translateZ(5px);-o-transform:translateZ(5px);transform:translateZ(5px)}.crossbutton7{-webkit-transform:translateZ(6px);-moz-transform:translateZ(6px);-ms-transform:translateZ(6px);-o-transform:translateZ(6px);transform:translateZ(6px)}.crossbutton8{-webkit-transform:translateZ(7px);-moz-transform:translateZ(7px);-ms-transform:translateZ(7px);-o-transform:translateZ(7px);transform:translateZ(7px)}.crossbutton9{-webkit-transform:translateZ(8px);-moz-transform:translateZ(8px);-ms-transform:translateZ(8px);-o-transform:translateZ(8px);transform:translateZ(8px)}.crossbutton10{-webkit-transform:translateZ(9px);-moz-transform:translateZ(9px);-ms-transform:translateZ(9px);-o-transform:translateZ(9px);transform:translateZ(9px)}.botlngbtn{width:30px;height:10px;position:absolute;top:250px;transform-style:preserve-3d;-webkit-transform-style:preserve-3d}.leftbut{left:30px}.rightbut{left:70px}.botlngbtnpart1,.botlngbtnpart10,.botlngbtnpart2,.botlngbtnpart3,.botlngbtnpart4,.botlngbtnpart5,.botlngbtnpart6,.botlngbtnpart7,.botlngbtnpart8,.botlngbtnpart9{width:30px;height:10px;border-radius:5px;position:absolute;background-color:#003f70}.botlngbtnpart1,.botlngbtnpart10{border:2px solid #000}.botlngbtnpart1{-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);-o-transform:translateZ(0);transform:translateZ(0)}.botlngbtnpart2{-webkit-transform:translateZ(1px);-moz-transform:translateZ(1px);-ms-transform:translateZ(1px);-o-transform:translateZ(1px);transform:translateZ(1px)}.botlngbtnpart3{-webkit-transform:translateZ(2px);-moz-transform:translateZ(2px);-ms-transform:translateZ(2px);-o-transform:translateZ(2px);transform:translateZ(2px)}.botlngbtnpart4{-webkit-transform:translateZ(3px);-moz-transform:translateZ(3px);-ms-transform:translateZ(3px);-o-transform:translateZ(3px);transform:translateZ(3px)}.botlngbtnpart5{-webkit-transform:translateZ(4px);-moz-transform:translateZ(4px);-ms-transform:translateZ(4px);-o-transform:translateZ(4px);transform:translateZ(4px)}.botlngbtnpart6{-webkit-transform:translateZ(5px);-moz-transform:translateZ(5px);-ms-transform:translateZ(5px);-o-transform:translateZ(5px);transform:translateZ(5px)}.botlngbtnpart7{-webkit-transform:translateZ(6px);-moz-transform:translateZ(6px);-ms-transform:translateZ(6px);-o-transform:translateZ(6px);transform:translateZ(6px)}.botlngbtnpart8{-webkit-transform:translateZ(7px);-moz-transform:translateZ(7px);-ms-transform:translateZ(7px);-o-transform:translateZ(7px);transform:translateZ(7px)}.botlngbtnpart9{-webkit-transform:translateZ(8px);-moz-transform:translateZ(8px);-ms-transform:translateZ(8px);-o-transform:translateZ(8px);transform:translateZ(8px)}.botlngbtnpart10{-webkit-transform:translateZ(9px);-moz-transform:translateZ(9px);-ms-transform:translateZ(9px);-o-transform:translateZ(9px);transform:translateZ(9px)}.bigredbtn{width:50px;height:50px;position:absolute;top:220px;right:20px;transform-style:preserve-3d;-webkit-transform-style:preserve-3d}.redbtnpart1,.redbtnpart10,.redbtnpart2,.redbtnpart3,.redbtnpart4,.redbtnpart5,.redbtnpart6,.redbtnpart7,.redbtnpart8,.redbtnpart9{width:50px;height:50px;border-radius:50%;position:absolute;background-color:#fe0000}.redbtnpart1,.redbtnpart10{border:2px solid #000}.redbtnpart1{-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);-o-transform:translateZ(0);transform:translateZ(0)}.redbtnpart2{-webkit-transform:translateZ(1px);-moz-transform:translateZ(1px);-ms-transform:translateZ(1px);-o-transform:translateZ(1px);transform:translateZ(1px)}.redbtnpart3{-webkit-transform:translateZ(2px);-moz-transform:translateZ(2px);-ms-transform:translateZ(2px);-o-transform:translateZ(2px);transform:translateZ(2px)}.redbtnpart4{-webkit-transform:translateZ(3px);-moz-transform:translateZ(3px);-ms-transform:translateZ(3px);-o-transform:translateZ(3px);transform:translateZ(3px)}.redbtnpart5{-webkit-transform:translateZ(4px);-moz-transform:translateZ(4px);-ms-transform:translateZ(4px);-o-transform:translateZ(4px);transform:translateZ(4px)}.redbtnpart6{-webkit-transform:translateZ(5px);-moz-transform:translateZ(5px);-ms-transform:translateZ(5px);-o-transform:translateZ(5px);transform:translateZ(5px)}.redbtnpart7{-webkit-transform:translateZ(6px);-moz-transform:translateZ(6px);-ms-transform:translateZ(6px);-o-transform:translateZ(6px);transform:translateZ(6px)}.redbtnpart8{-webkit-transform:translateZ(7px);-moz-transform:translateZ(7px);-ms-transform:translateZ(7px);-o-transform:translateZ(7px);transform:translateZ(7px)}.redbtnpart9{-webkit-transform:translateZ(8px);-moz-transform:translateZ(8px);-ms-transform:translateZ(8px);-o-transform:translateZ(8px);transform:translateZ(8px)}.redbtnpart10{-webkit-transform:translateZ(9px);-moz-transform:translateZ(9px);-ms-transform:translateZ(9px);-o-transform:translateZ(9px);transform:translateZ(9px)}.smlgrnbtn{width:20px;height:20px;position:absolute;top:190px;right:15px;transform-style:preserve-3d;-webkit-transform-style:preserve-3d}.grnbtnpart1,.grnbtnpart10,.grnbtnpart2,.grnbtnpart3,.grnbtnpart4,.grnbtnpart5,.grnbtnpart6,.grnbtnpart7,.grnbtnpart8,.grnbtnpart9{width:20px;height:20px;border-radius:50%;position:absolute;background-color:#0ff942}.grnbtnpart1,.grnbtnpart10,.leftside,.rightside{border:2px solid #000}.grnbtnpart1{-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);-o-transform:translateZ(0);transform:translateZ(0)}.grnbtnpart2{-webkit-transform:translateZ(1px);-moz-transform:translateZ(1px);-ms-transform:translateZ(1px);-o-transform:translateZ(1px);transform:translateZ(1px)}.grnbtnpart3{-webkit-transform:translateZ(2px);-moz-transform:translateZ(2px);-ms-transform:translateZ(2px);-o-transform:translateZ(2px);transform:translateZ(2px)}.grnbtnpart4{-webkit-transform:translateZ(3px);-moz-transform:translateZ(3px);-ms-transform:translateZ(3px);-o-transform:translateZ(3px);transform:translateZ(3px)}.grnbtnpart5{-webkit-transform:translateZ(4px);-moz-transform:translateZ(4px);-ms-transform:translateZ(4px);-o-transform:translateZ(4px);transform:translateZ(4px)}.grnbtnpart6{-webkit-transform:translateZ(5px);-moz-transform:translateZ(5px);-ms-transform:translateZ(5px);-o-transform:translateZ(5px);transform:translateZ(5px)}.grnbtnpart7{-webkit-transform:translateZ(6px);-moz-transform:translateZ(6px);-ms-transform:translateZ(6px);-o-transform:translateZ(6px);transform:translateZ(6px)}.grnbtnpart8{-webkit-transform:translateZ(7px);-moz-transform:translateZ(7px);-ms-transform:translateZ(7px);-o-transform:translateZ(7px);transform:translateZ(7px)}.grnbtnpart9{-webkit-transform:translateZ(8px);-moz-transform:translateZ(8px);-ms-transform:translateZ(8px);-o-transform:translateZ(8px);transform:translateZ(8px)}.grnbtnpart10{-webkit-transform:translateZ(9px);-moz-transform:translateZ(9px);-ms-transform:translateZ(9px);-o-transform:translateZ(9px);transform:translateZ(9px)}.leftside,.rightside{width:100px;height:300px;background-color:#64bea5;position:relative}.rightside{-webkit-transform:translateX(-50px) rotateY(90deg);-moz-transform:translateX(-50px) rotateY(90deg);-ms-transform:translateX(-50px) rotateY(90deg);-o-transform:translateX(-50px) rotateY(90deg);transform:translateX(-50px) rotateY(90deg)}.leftside,.rightside{transform-origin:50% 0}.leftside{-webkit-transform:translateX(50px) rotateY(-90deg);-moz-transform:translateX(50px) rotateY(-90deg);-ms-transform:translateX(50px) rotateY(-90deg);-o-transform:translateX(50px) rotateY(-90deg);transform:translateX(50px) rotateY(-90deg)}.dotswrap{position:relative;top:20px;left:0}.dot3,.dot4,.dot5{top:25px}.dot1,.dot2,.dot3,.dot4,.dot5,.dot6,.dot7{width:10px;height:10px;border-radius:50%;background-color:#000;position:absolute}.boxopen,.grate{border:2px solid #000}.bmoname,.grates{position:absolute;width:100%;text-align:center}.dot1{left:30px}.dot2{right:30px}.dot3{left:16px}.dot4{left:42px}.dot5{right:16px}.dot6{left:30px;top:50px}.dot7{right:30px;top:50px}.bmoname{color:#000;font-family:Arial,sans-serif;left:0;top:110px;font-size:44px;font-weight:700}.grates{top:20px}.grate{width:18px;height:80px;margin:0 9px;background-color:#015033}.boxopen{width:166px;height:120px;position:absolute;top:120px;left:15px;background-color:#64bea5}.boxdot1,.boxdot2,.boxdot3,.boxdot4{width:10px;height:10px;border-radius:50%;background-color:#2b2b2b;position:absolute}.boxdot1{top:10px;left:10px}.boxdot2{top:10px;right:10px}.boxdot3{bottom:10px;left:10px}.boxdot4{bottom:10px;right:10px}.bottomopen{width:80px;height:22px;position:absolute;top:260px;left:60px;border:2px solid #000;background-color:#64bea5}@keyframes BMOspin-front{100%{-webkit-transform:rotateY(-360deg);-moz-transform:rotateY(-360deg);-ms-transform:rotateY(-360deg);-o-transform:rotateY(-360deg);transform:rotateY(-360deg)}}@keyframes BMOspin-sides{100%{-webkit-transform:rotateY(360deg);-moz-transform:rotateY(360deg);-ms-transform:rotateY(360deg);-o-transform:rotateY(360deg);transform:rotateY(360deg)}}
+  </style>
+  <body>
+<div class="BMOwrap">
+  <div class="BMO">
+    <div class="leftside"><div class="dotswrap">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+      <div class="dot3"></div>
+      <div class="dot4"></div>
+      <div class="dot5"></div>
+      <div class="dot6"></div>
+      <div class="dot7"></div>
+    </div>
+      <div class="bmoname">
+        B<br>M<br>O
+      </div>
+    </div><div class="front">
+    <div class="face">
+      <div class="eyes left"></div>
+      <div class="eyes right"></div>
+      <div class="mouth">
+        <div class="teeth"></div>
+      </div>
+    </div>
+    <div class="buttonlong">
+      <div class="buttonlongpart1"></div>
+      <div class="buttonlongpart2"></div>
+      <div class="buttonlongpart3"></div>
+      <div class="buttonlongpart4"></div>
+      <div class="buttonlongpart5"></div>
+      <div class="buttonlongpart6"></div>
+      <div class="buttonlongpart7"></div>
+      <div class="buttonlongpart8"></div>
+      <div class="buttonlongpart9"></div>
+      <div class="buttonlongpart10"></div>
+    </div>
+    <div class="buttonround">
+      <div class="buttonroundpart1"></div>
+      <div class="buttonroundpart2"></div>
+      <div class="buttonroundpart3"></div>
+      <div class="buttonroundpart4"></div>
+      <div class="buttonroundpart5"></div>
+      <div class="buttonroundpart6"></div>
+      <div class="buttonroundpart7"></div>
+      <div class="buttonroundpart8"></div>
+      <div class="buttonroundpart9"></div>
+      <div class="buttonroundpart10"></div>
+    </div>
+    <div class="yellowcrossbutton">
+      <div class="crossbutton1">
+        <div class="crossbuttonhori1"></div>
+        <div class="crossbuttonvert1"></div>
+        <div class="crossbuttonhider1"></div>
+      </div>
+      <div class="crossbutton2">
+        <div class="crossbuttonhori1"></div>
+        <div class="crossbuttonvert1"></div>
+        <div class="crossbuttonhider1"></div>
+      </div>
+      <div class="crossbutton3">
+        <div class="crossbuttonhori1"></div>
+        <div class="crossbuttonvert1"></div>
+        <div class="crossbuttonhider1"></div>
+      </div>
+      <div class="crossbutton4">
+        <div class="crossbuttonhori1"></div>
+        <div class="crossbuttonvert1"></div>
+        <div class="crossbuttonhider1"></div>
+      </div>
+      <div class="crossbutton5">
+        <div class="crossbuttonhori1"></div>
+        <div class="crossbuttonvert1"></div>
+        <div class="crossbuttonhider1"></div>
+      </div>
+      <div class="crossbutton6">
+        <div class="crossbuttonhori1"></div>
+        <div class="crossbuttonvert1"></div>
+        <div class="crossbuttonhider1"></div>
+      </div>
+      <div class="crossbutton7">
+        <div class="crossbuttonhori1"></div>
+        <div class="crossbuttonvert1"></div>
+        <div class="crossbuttonhider1"></div>
+      </div>
+      <div class="crossbutton8">
+        <div class="crossbuttonhori1"></div>
+        <div class="crossbuttonvert1"></div>
+        <div class="crossbuttonhider1"></div>
+      </div>
+      <div class="crossbutton9">
+        <div class="crossbuttonhori1"></div>
+        <div class="crossbuttonvert1"></div>
+        <div class="crossbuttonhider1"></div>
+      </div>
+      <div class="crossbutton10">
+        <div class="crossbuttonhori1"></div>
+        <div class="crossbuttonvert1"></div>
+        <div class="crossbuttonhider1"></div>
+      </div>
+    </div>
+    <div class="botlngbtn leftbut">
+      <div class="botlngbtnpart1"></div>
+      <div class="botlngbtnpart2"></div>
+      <div class="botlngbtnpart3"></div>
+      <div class="botlngbtnpart4"></div>
+      <div class="botlngbtnpart5"></div>
+      <div class="botlngbtnpart6"></div>
+      <div class="botlngbtnpart7"></div>
+      <div class="botlngbtnpart8"></div>
+      <div class="botlngbtnpart9"></div>
+      <div class="botlngbtnpart10"></div>
+    </div>
+    <div class="botlngbtn rightbut">
+      <div class="botlngbtnpart1"></div>
+      <div class="botlngbtnpart2"></div>
+      <div class="botlngbtnpart3"></div>
+      <div class="botlngbtnpart4"></div>
+      <div class="botlngbtnpart5"></div>
+      <div class="botlngbtnpart6"></div>
+      <div class="botlngbtnpart7"></div>
+      <div class="botlngbtnpart8"></div>
+      <div class="botlngbtnpart9"></div>
+      <div class="botlngbtnpart10"></div>
+    </div>
+    <div class="bigredbtn">
+      <div class="redbtnpart1"></div>
+      <div class="redbtnpart2"></div>
+      <div class="redbtnpart3"></div>
+      <div class="redbtnpart4"></div>
+      <div class="redbtnpart5"></div>
+      <div class="redbtnpart6"></div>
+      <div class="redbtnpart7"></div>
+      <div class="redbtnpart8"></div>
+      <div class="redbtnpart9"></div>
+      <div class="redbtnpart10"></div>
+    </div>
+    <div class="smlgrnbtn">
+      <div class="grnbtnpart1"></div>
+      <div class="grnbtnpart2"></div>
+      <div class="grnbtnpart3"></div>
+      <div class="grnbtnpart4"></div>
+      <div class="grnbtnpart5"></div>
+      <div class="grnbtnpart6"></div>
+      <div class="grnbtnpart7"></div>
+      <div class="grnbtnpart8"></div>
+      <div class="grnbtnpart9"></div>
+      <div class="grnbtnpart10"></div>
+    </div>
+  </div><div class="rightside">
+    <div class="dotswrap">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+      <div class="dot3"></div>
+      <div class="dot4"></div>
+      <div class="dot5"></div>
+      <div class="dot6"></div>
+      <div class="dot7"></div>
+    </div>
+    <div class="bmoname">
+      B<br>M<br>O
+    </div>
+  </div><div class="back">
+    <div class="grates">
+      <div class="grate"></div><div class="grate"></div><div class="grate"></div><div class="grate"></div><div class="grate"></div>
+    </div>
+    <div class="boxopen">
+      <div class="boxdot1"></div>
+      <div class="boxdot2"></div>
+      <div class="boxdot3"></div>
+      <div class="boxdot4"></div>
+    </div>
+    <div class="bottomopen"></div>
+  </div>
+
+
+  </div>
+</div>
+</body>
+</html>

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get '/examples/svgpage' => 'examples#svgpage'
 
+  get '/examples/cssBMO' => 'examples#cssBMO'
+
   resources :pages
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
