@@ -6,7 +6,7 @@
 
       <%= case page.page_type
             when 1 then ('<h1>'+page.title+'</h1><div class="text">'+page.body+'</div>').html_safe
-            when 2 then ('<div class="image-wrapper">'+image_tag(page.image.url(:large))+'</div>').html_safe
+            when 2 then ('<div class="image-wrapper">'+image_tag(page.image.url(:large), :class => 'img-responsive')+'</div>').html_safe
             else        "NULL"
           end %>
     <% else %>
@@ -15,7 +15,7 @@
         <iframe data-frameSrc="/examples/<%= page.html %>" frameborder="0" width="100%" height="750"></iframe>
       </section>
     <% end %>
-
+  <% if page.page_type != 0 %>
   <div class="content-bottom">
     <span class="left">
       Ben Wunderlich <%= Date.today.strftime('%d.%m.%Y') %>
@@ -24,6 +24,7 @@
        Folie: <%= page.number %>
     </span>
   </div>
+<% end %>
 </span>
 <% if page.custom_js.present? %>
     <script>

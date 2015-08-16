@@ -6,13 +6,27 @@
 .facade-minimal
 {
 	position:  relative;
-	margin:  24px 0;
-	padding:  64px 0px 0px 0px;
+	margin: 0;
+	padding:  54px 0px 0px 0px;
 	box-shadow:  0px 5px 10px rgba(0,0,0,0.1);
 	font-family: sans-serif;
 	color:#454545;
 	border-radius:3px;
 	overflow-x: visible;
+}
+
+.facade-minimal iframe{
+    background-color: #FFF;
+}
+
+.facade-minimal .reload-button {
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    top: 2%;
+    left: 5%;
+    cursor: pointer;
+    z-index: 20;
 }
 
 /*

@@ -26,7 +26,7 @@ body {
 		family: $primary-font; // variables inside partials > _variables.scss
 	}
 	color: $color-6;
-	background-color: shade($color-1, 20%);
+	background-color: shade($color-6, 20%);
 	@include font-smoothing;
 
 	&::before {
@@ -65,10 +65,74 @@ body[data-hijacking="on"] {
 .cd-section {
 	height: 100vh;
 
-	h2 {
-		line-height: 100vh;
-		text-align: center;
-		font-size: 2.4rem;
+	.content {
+		height: 100vh;
+		text-align: left;
+		font-size: 3.4rem;
+        display:block;
+        padding: 100px;
+        position: relative;
+
+        h1{
+          font-size: 80px;
+          margin-bottom: 30px;
+        }
+
+        .title{
+          font-size: 90px;
+          display: flex;
+          font-weight: bold;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          line-height: 90px;
+        }
+
+        .text{
+          padding-left: 80px;
+          margin-top:50px;
+
+          ul.num{
+            list-style-type: decimal;
+          }
+
+          ul.dot{
+            list-style-type: disc;
+          }
+
+          li{
+            font-size:55px;
+            line-height: 55px;
+            margin-bottom: 10px;
+          }
+
+          div.svg-container {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .image-wrapper{
+          text-align: center;
+
+          img.img-responsive {
+            width: 70%;
+          }
+        }
+
+        .content-bottom{
+          position: absolute;
+          bottom: 80px;
+          width: 90%;
+
+          .left{
+            float: left;
+          }
+
+          .right{
+            float: right;
+          }
+        }
 	}
 
 	&:first-of-type > div {
@@ -91,44 +155,6 @@ body[data-hijacking="on"] {
 
 	& > div {
 		background-color: $color-1;
-	}
-
-	[data-animation="parallax"] & > div,
-	[data-animation="fixed"] & > div,
-	[data-animation="opacity"] & > div {
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-
-	[data-animation="parallax"] &:first-of-type > div,
-	[data-animation="fixed"] &:first-of-type > div,
-	[data-animation="opacity"] &:first-of-type > div {
-		background-image: url('../img/img-1.jpg');
-	}
-
-	[data-animation="parallax"] &:nth-of-type(2) > div,
-	[data-animation="fixed"] &:nth-of-type(2) > div,
-	[data-animation="opacity"] &:nth-of-type(2) > div {
-		background-image: url('../img/img-2.jpg');
-	}
-
-	[data-animation="parallax"] &:nth-of-type(3) > div,
-	[data-animation="fixed"] &:nth-of-type(3) > div,
-	[data-animation="opacity"] &:nth-of-type(3) > div {
-		background-image: url('../img/img-3.jpg');
-	}
-
-	[data-animation="parallax"] &:nth-of-type(4) > div,
-	[data-animation="fixed"] &:nth-of-type(4) > div,
-	[data-animation="opacity"] &:nth-of-type(4) > div {
-		background-image: url('../img/img-4.jpg');
-	}
-
-	[data-animation="parallax"] &:nth-of-type(5) > div,
-	[data-animation="fixed"] &:nth-of-type(5) > div,
-	[data-animation="opacity"] &:nth-of-type(5) > div {
-		background-image: url('../img/img-5.jpg');
 	}
 
 	@include MQ(L) {
@@ -223,7 +249,7 @@ body[data-hijacking="on"] {
 		text-indent: 100%;
 		white-space: nowrap;
 
-		background: url(../img/cd-icon-arrow.svg) no-repeat center center;
+		background: asset-data-url('cd-icon-arrow.svg') no-repeat center center;
 
 		&.cd-prev {
 			@include transform(rotate(180deg));

@@ -3,13 +3,13 @@ Rails.application.routes.draw do
 
   resources :reviews
 
-  get 'examples/:id' => 'examples#show'
-
   get 'examples/show/:id' => 'examples#show'
 
   get '/examples/view/:id' => 'examples#view'
 
   get '/examples/json/:id' => 'examples#json'
+
+  get '/examples/svgpage' => 'examples#svgpage'
 
   resources :pages
 
